@@ -1,0 +1,12 @@
+xst -intstyle ise -filter "/home/ise/ise-shared/TestProject/iseconfig/filter.filter" -ifn "/home/ise/ise-shared/TestProject/TopLevel.xst" -ofn "/home/ise/ise-shared/TestProject/TopLevel.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc src/topLevel.ucf -p xc6slx45t-fgg484-3 TopLevel.ngc TopLevel.ngd  
+map -filter "/home/ise/ise-shared/TestProject/iseconfig/filter.filter" -intstyle ise -p xc6slx45t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o TopLevel_map.ncd TopLevel.ngd TopLevel.pcf 
+par -filter "/home/ise/ise-shared/TestProject/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off TopLevel_map.ncd TopLevel.ncd TopLevel.pcf 
+trce -filter /home/ise/ise-shared/TestProject/iseconfig/filter.filter -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TopLevel.twx TopLevel.ncd -o TopLevel.twr TopLevel.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f TopLevel.ut TopLevel.ncd 
+xst -intstyle ise -filter "/home/ise/ise-shared/TestProject/iseconfig/filter.filter" -ifn "/home/ise/ise-shared/TestProject/TopLevel.xst" -ofn "/home/ise/ise-shared/TestProject/TopLevel.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc src/topLevel.ucf -p xc6slx45t-fgg484-3 TopLevel.ngc TopLevel.ngd  
+map -filter "/home/ise/ise-shared/TestProject/iseconfig/filter.filter" -intstyle ise -p xc6slx45t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o TopLevel_map.ncd TopLevel.ngd TopLevel.pcf 
+par -filter "/home/ise/ise-shared/TestProject/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off TopLevel_map.ncd TopLevel.ncd TopLevel.pcf 
+trce -filter /home/ise/ise-shared/TestProject/iseconfig/filter.filter -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TopLevel.twx TopLevel.ncd -o TopLevel.twr TopLevel.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f TopLevel.ut TopLevel.ncd 

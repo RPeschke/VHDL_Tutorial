@@ -1,0 +1,13 @@
+//! **************************************************************************
+// Written by: Map P.20160913 on Fri Jun 29 22:21:19 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "CLK_33MHZ_SYSACE" LOCATE = SITE "N19" LEVEL 1;
+COMP "FPGA_AWAKE" LOCATE = SITE "V19" LEVEL 1;
+COMP "GPIO_LED_0" LOCATE = SITE "D17" LEVEL 1;
+COMP "GPIO_LED_1" LOCATE = SITE "AB4" LEVEL 1;
+COMP "GPIO_LED_2" LOCATE = SITE "D21" LEVEL 1;
+COMP "GPIO_LED_3" LOCATE = SITE "W15" LEVEL 1;
+SCHEMATIC END;
+

@@ -1,0 +1,61 @@
+ISim log file
+Running: /home/ise/ise-shared/TestProject/TopLevelTb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/ise-shared/TestProject/TopLevelTb_isim_beh.wdb 
+ISim P.20160913 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 2.00s
+Stopped at time : 7992883965 ps : File "/home/ise/ise-shared/TestProject/src/TopLevelTb.vhd" Line 84
+# restart
+# run 2.00s
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 188791725 ps : File "/home/ise/ise-shared/TestProject/src/ToggleCounter2.vhd" Line 49
+ISim P.20160913 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 2.00s
+Stopped at time : 378818175 ps : File "/home/ise/ise-shared/TestProject/src/ToggleCounter2.vhd" Line 49
+# run 2.00s
+Stopped at time : 830479065 ps : File "/home/ise/ise-shared/TestProject/src/ToggleCounter.vhd" Line 52
+# run 2.00s
+Stopped at time : 47992904775 ps : File "/home/ise/ise-shared/TestProject/src/ToggleCounter.vhd" Line 52
+ISim P.20160913 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 2.00s
+Stopped at time : 7236371745 ps : File "/home/ise/ise-shared/TestProject/src/ToggleCounterShiftReg.vhd" Line 54
+ISim P.20160913 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# exit 0

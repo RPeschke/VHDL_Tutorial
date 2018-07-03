@@ -1,0 +1,453 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: TopLevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopLevel.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopLevel"
+Output Format                      : NGC
+Target Device                      : xc6slx45t-3-fgg484
+
+---- Source Options
+Top Module Name                    : TopLevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ise/ise-shared/TestProject/src/ShiftReg32.vhd" into library work
+Parsing entity <ShiftReg32>.
+Parsing architecture <Behavioral> of entity <shiftreg32>.
+Parsing VHDL file "/home/ise/ise-shared/TestProject/src/ToggleCounterShiftReg.vhd" into library work
+Parsing entity <ToggleCounterShiftReg>.
+Parsing architecture <Behavioral> of entity <togglecountershiftreg>.
+WARNING:HDLCompiler:946 - "/home/ise/ise-shared/TestProject/src/ToggleCounterShiftReg.vhd" Line 89: Actual for formal port clken is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/ise/ise-shared/TestProject/src/ToggleCounterShiftReg.vhd" Line 99: Actual for formal port clken is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/ise/ise-shared/TestProject/src/ToggleCounterShiftReg.vhd" Line 109: Actual for formal port clken is neither a static name nor a globally static expression
+Parsing VHDL file "/home/ise/ise-shared/TestProject/src/ToggleCounter2.vhd" into library work
+Parsing entity <ToggleCounter2>.
+Parsing architecture <Behavioral> of entity <togglecounter2>.
+Parsing VHDL file "/home/ise/ise-shared/TestProject/src/ToggleCounter.vhd" into library work
+Parsing entity <ToggleCounter>.
+Parsing architecture <Behavioral> of entity <togglecounter>.
+Parsing VHDL file "/home/ise/ise-shared/TestProject/src/topLevel.vhd" into library work
+Parsing entity <TopLevel>.
+Parsing architecture <Behavioral> of entity <toplevel>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TopLevel> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ToggleCounter> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ToggleCounter2> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ToggleCounterShiftReg> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ShiftReg32> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ShiftReg32> (architecture <Behavioral>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TopLevel>.
+    Related source file is "/home/ise/ise-shared/TestProject/src/topLevel.vhd".
+    Summary:
+	no macro.
+Unit <TopLevel> synthesized.
+
+Synthesizing Unit <ToggleCounter>.
+    Related source file is "/home/ise/ise-shared/TestProject/src/ToggleCounter.vhd".
+        CYCLES_PER_HALF_PERIOD_G = 16500000
+    Found 1-bit register for signal <outValue>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit adder for signal <counter[31]_GND_6_o_add_0_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+Unit <ToggleCounter> synthesized.
+
+Synthesizing Unit <ToggleCounter2>.
+    Related source file is "/home/ise/ise-shared/TestProject/src/ToggleCounter2.vhd".
+        BIT_SELECT_G = 24
+    Found 25-bit register for signal <counter>.
+    Found 25-bit adder for signal <counter[24]_GND_7_o_add_0_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+Unit <ToggleCounter2> synthesized.
+
+Synthesizing Unit <ToggleCounterShiftReg>.
+    Related source file is "/home/ise/ise-shared/TestProject/src/ToggleCounterShiftReg.vhd".
+    Found 1-bit register for signal <outValue>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <ToggleCounterShiftReg> synthesized.
+
+Synthesizing Unit <ShiftReg32_1>.
+    Related source file is "/home/ise/ise-shared/TestProject/src/ShiftReg32.vhd".
+        BIT_CHOICE_G = 31
+    Found 32-bit register for signal <shiftReg>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <ShiftReg32_1> synthesized.
+
+Synthesizing Unit <ShiftReg32_2>.
+    Related source file is "/home/ise/ise-shared/TestProject/src/ShiftReg32.vhd".
+        BIT_CHOICE_G = 7
+    Found 32-bit register for signal <shiftReg>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <ShiftReg32_2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 25-bit adder                                          : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 9
+ 1-bit register                                        : 2
+ 25-bit register                                       : 1
+ 32-bit register                                       : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <ToggleCounter>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <ToggleCounter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ToggleCounter2>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <ToggleCounter2> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 25-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 162
+ Flip-Flops                                            : 162
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ShiftReg32_1> ...
+
+Optimizing unit <ShiftReg32_2> ...
+
+Optimizing unit <TopLevel> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopLevel, actual ratio is 1.
+
+Final Macro Processing ...
+
+Processing Unit <TopLevel> :
+	Found 32-bit shift register for signal <U_ToggleCounterShiftRegister/U_ShiftReg0/shiftReg_31>.
+	Found 32-bit shift register for signal <U_ToggleCounterShiftRegister/U_ShiftReg1/shiftReg_31>.
+	Found 32-bit shift register for signal <U_ToggleCounterShiftRegister/U_ShiftReg2/shiftReg_31>.
+	Found 32-bit shift register for signal <U_ToggleCounterShiftRegister/U_ShiftReg3/shiftReg_31>.
+	Found 32-bit shift register for signal <U_ToggleCounterShiftRegister/U_ShiftReg4/shiftReg_7>.
+Unit <TopLevel> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 59
+ Flip-Flops                                            : 59
+# Shift Registers                                      : 5
+ 32-bit shift register                                 : 5
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TopLevel.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 217
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 55
+#      LUT2                        : 34
+#      LUT3                        : 2
+#      LUT4                        : 1
+#      LUT6                        : 9
+#      MUXCY                       : 55
+#      VCC                         : 1
+#      XORCY                       : 57
+# FlipFlops/Latches                : 64
+#      FD                          : 59
+#      FDE                         : 5
+# Shift Registers                  : 5
+#      SRLC32E                     : 5
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 6
+#      IBUFG                       : 1
+#      OBUF                        : 5
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45tfgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              64  out of  54576     0%  
+ Number of Slice LUTs:                  108  out of  27288     0%  
+    Number used as Logic:               103  out of  27288     0%  
+    Number used as Memory:                5  out of   6408     0%  
+       Number used as SRL:                5
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    108
+   Number with an unused Flip Flop:      44  out of    108    40%  
+   Number with an unused LUT:             0  out of    108     0%  
+   Number of fully used LUT-FF pairs:    64  out of    108    59%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    296     2%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK_33MHZ_SYSACE                   | IBUFG+BUFG             | 69    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.164ns (Maximum Frequency: 240.136MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 3.668ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_33MHZ_SYSACE'
+  Clock period: 4.164ns (frequency: 240.136MHz)
+  Total number of paths / destination ports: 1942 / 72
+-------------------------------------------------------------------------
+Delay:               4.164ns (Levels of Logic = 3)
+  Source:            U_ToggleCounter/counter_25 (FF)
+  Destination:       U_ToggleCounter/counter_0 (FF)
+  Source Clock:      CLK_33MHZ_SYSACE rising
+  Destination Clock: CLK_33MHZ_SYSACE rising
+
+  Data Path: U_ToggleCounter/counter_25 to U_ToggleCounter/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.981  U_ToggleCounter/counter_25 (U_ToggleCounter/counter_25)
+     LUT6:I0->O            3   0.203   0.995  U_ToggleCounter/counter[31]_GND_6_o_equal_2_o<31>5 (U_ToggleCounter/counter[31]_GND_6_o_equal_2_o<31>4)
+     LUT6:I1->O           17   0.203   1.028  U_ToggleCounter/counter[31]_GND_6_o_equal_2_o<31>7 (U_ToggleCounter/counter[31]_GND_6_o_equal_2_o)
+     LUT2:I1->O            1   0.205   0.000  U_ToggleCounter/counter_0_rstpot (U_ToggleCounter/counter_0_rstpot)
+     FD:D                      0.102          U_ToggleCounter/counter_0
+    ----------------------------------------
+    Total                      4.164ns (1.160ns logic, 3.004ns route)
+                                       (27.9% logic, 72.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_33MHZ_SYSACE'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.668ns (Levels of Logic = 1)
+  Source:            U_ToggleCounter/outValue (FF)
+  Destination:       GPIO_LED_2 (PAD)
+  Source Clock:      CLK_33MHZ_SYSACE rising
+
+  Data Path: U_ToggleCounter/outValue to GPIO_LED_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.650  U_ToggleCounter/outValue (U_ToggleCounter/outValue)
+     OBUF:I->O                 2.571          GPIO_LED_2_OBUF (GPIO_LED_2)
+    ----------------------------------------
+    Total                      3.668ns (3.018ns logic, 0.650ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_33MHZ_SYSACE
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+CLK_33MHZ_SYSACE|    4.164|         |         |         |
+----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 12.04 secs
+ 
+--> 
+
+
+Total memory usage is 497180 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

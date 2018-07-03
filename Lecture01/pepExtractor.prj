@@ -1,0 +1,5 @@
+work	"src/ShiftReg32.vhd"
+work	"src/ToggleCounter.vhd"
+work	"src/ToggleCounter2.vhd"
+work	"src/ToggleCounterShiftReg.vhd"
+work	"src/topLevel.vhd"
