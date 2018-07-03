@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/ise-shared/TestProject/TopLevel.ncd
+OUTFILE=/home/ise/ise-shared/TestProject/TopLevel.bit
+FAMILY=Spartan6
+PART=xc6slx45t-3fgg484
+WORKINGDIR=/home/ise/ise-shared/TestProject
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620
