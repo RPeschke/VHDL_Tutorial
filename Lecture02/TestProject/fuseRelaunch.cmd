@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ise/ise-shared/TestProject/ShiftRegMax32Tb_isim_beh.exe" -prj "/home/ise/ise-shared/TestProject/ShiftRegMax32Tb_beh.prj" "work.ShiftRegMax32Tb" 
